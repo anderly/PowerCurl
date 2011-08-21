@@ -10,41 +10,33 @@ I've been working with Twilio and a bunch of other rest APIs and wanted an easy 
 
 Just like curl: 
 
-curl -X <verb> <url> -u <username>:<password>
-
-or
-
-powercurl -X <verb> <url> -u <username>:<password>
-
-or
-
-pc -X <verb> <url> -u <username>:<password>
+	curl -X <verb> <url> -u <username>:<password>
 
 ## Example using Twilio Rest API
 
-curl -X GET 'https://api.twilio.com/2010-04-01/Accounts/{AccountSid}.xml' -u {AccountSid}:{AuthToken}
+	curl -X GET 'https://api.twilio.com/2010-04-01/Accounts/{AccountSid}.xml' -u {AccountSid}:{AuthToken}
 
 or
 
-curl -X GET 'https://api.twilio.com/2010-04-01/Accounts/{AccountSid}.json' -u {AccountSid}:{AuthToken}
+	curl -X GET 'https://api.twilio.com/2010-04-01/Accounts/{AccountSid}.json' -u {AccountSid}:{AuthToken}
 
 ## Benefits of PowerShell
 
 Using the Twilio example above, you could easily parse this xml using:
 
-([xml](curl -X get https://api.twilio.com/2010-04-01/Accounts/{AccountSid}.xml -u {AccountSid}:{AuthToken})).TwilioResponse.Account
+	([xml](curl -X get https://api.twilio.com/2010-04-01/Accounts/{AccountSid}.xml -u {AccountSid}:{AuthToken})).TwilioResponse.Account
 
 PowerShell Output:
 
-Sid             : {AccountSid}
-FriendlyName    : {Your Account Name}
-Status          : {active | suspended | closed} 
-DateCreated     : {DateCreated}
-DateUpdated     : {DateUpdated}
-AuthToken       : {AuthToken}
-Type            : {Type}
-Uri             : /2010-04-01/Accounts/{AccountSid}.xml
-SubresourceUris : SubresourceUris
+	Sid             : {AccountSid}
+	FriendlyName    : {Your Account Name}
+	Status          : {active | suspended | closed} 
+	DateCreated     : {DateCreated}
+	DateUpdated     : {DateUpdated}
+	AuthToken       : {AuthToken}
+	Type            : {Type}
+	Uri             : /2010-04-01/Accounts/{AccountSid}.xml
+	SubresourceUris : SubresourceUris
 
 ## Disclaimer
 
