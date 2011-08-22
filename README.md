@@ -4,7 +4,7 @@ A simple curl-like module for PowerShell.
 
 ## Why
 
-I've been working with Twilio and a bunch of other rest APIs and wanted an easy way to test them without having to leave Visual Studio. So, I figured why not build a basic PowerShell implementation of curl (using the same command-line signature) and deliver it via NuGet so that it can be used via the NuGet Package Manager console.
+I've been working with Twilio and a bunch of other rest APIs and wanted an easy way to test them without having to leave Visual Studio. So, I figured why not build a basic curl-like PowerShell module (using the same command-line signature) and deliver it via NuGet so that it can be used via the NuGet Package Manager console.
 
 ## Usage
 
