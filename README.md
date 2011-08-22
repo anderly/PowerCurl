@@ -1,6 +1,6 @@
 # PowerCurl
 
-A simple curl implementation in PowerShell.
+A simple curl-like module for PowerShell.
 
 ## Why
 
