@@ -1,3 +1,3 @@
 param($installPath, $toolsPath, $package)
 
-Import-Module(Join-Path $toolsPath curl.psm1)
+Import-Module(Join-Path $toolsPath powercurl.psm1)
