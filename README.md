@@ -10,19 +10,19 @@ I've been working with Twilio and a bunch of other rest APIs and wanted an easy 
 
 Just like curl: 
 
-	powercurl -X <verb> <url> -u <username>:<password>
+	powercurl -X <command> <url> -u <username>:<password>
 	
 Thanks to PowerShell, you can also use one of 3 other defined aliases (pcurl, curl, pc):
 
-	pcurl -X <verb> <url> -u <username>:<password>
+	pcurl -X <command> <url> -u <username>:<password>
 	
 or
 
-	curl -X <verb> <url> -u <username>:<password>
+	curl -X <command> <url> -u <username>:<password>
 	
 or
 
-	pc -X <verb> <url> -u <username>:<password>
+	pc -X <command> <url> -u <username>:<password>
 
 ## Example using Twilio Rest API
 
@@ -36,7 +36,7 @@ or
 
 Using the Twilio example above, you could easily parse this xml using:
 
-	([xml](pcurl -X get https://api.twilio.com/2010-04-01/Accounts/{AccountSid}.xml -u {AccountSid}:{AuthToken})).TwilioResponse.Account
+	([xml](pcurl -X GET https://api.twilio.com/2010-04-01/Accounts/{AccountSid}.xml -u {AccountSid}:{AuthToken})).TwilioResponse.Account
 
 PowerShell Output:
 
