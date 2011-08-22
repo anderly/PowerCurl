@@ -10,21 +10,33 @@ I've been working with Twilio and a bunch of other rest APIs and wanted an easy 
 
 Just like curl: 
 
+	powercurl -X <verb> <url> -u <username>:<password>
+	
+Thanks to PowerShell, you can also use one of 3 other defined aliases (pcurl, curl, pc):
+
+	pcurl -X <verb> <url> -u <username>:<password>
+	
+or
+
 	curl -X <verb> <url> -u <username>:<password>
+	
+or
+
+	pc -X <verb> <url> -u <username>:<password>
 
 ## Example using Twilio Rest API
 
-	curl -X GET 'https://api.twilio.com/2010-04-01/Accounts/{AccountSid}.xml' -u {AccountSid}:{AuthToken}
+	pcurl -X GET 'https://api.twilio.com/2010-04-01/Accounts/{AccountSid}.xml' -u {AccountSid}:{AuthToken}
 
 or
 
-	curl -X GET 'https://api.twilio.com/2010-04-01/Accounts/{AccountSid}.json' -u {AccountSid}:{AuthToken}
+	pcurl -X GET 'https://api.twilio.com/2010-04-01/Accounts/{AccountSid}.json' -u {AccountSid}:{AuthToken}
 
 ## Benefits of PowerShell
 
 Using the Twilio example above, you could easily parse this xml using:
 
-	([xml](curl -X get https://api.twilio.com/2010-04-01/Accounts/{AccountSid}.xml -u {AccountSid}:{AuthToken})).TwilioResponse.Account
+	([xml](pcurl -X get https://api.twilio.com/2010-04-01/Accounts/{AccountSid}.xml -u {AccountSid}:{AuthToken})).TwilioResponse.Account
 
 PowerShell Output:
 
